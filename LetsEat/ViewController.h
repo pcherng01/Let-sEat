@@ -1,0 +1,16 @@
+//
+//  ViewController.h
+//  LetsEat
+//
+//  Created by Monte's Pro 13" on 10/9/15.
+//  Copyright © 2015 Monte Thakkar. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController
+
+- (IBAction)button:(UIButton *)sender;
+
+@end
+
