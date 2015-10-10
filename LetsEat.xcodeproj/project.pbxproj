@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B586FCE1BC98A3700DFE4A8 /* SCShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B586FCD1BC98A3700DFE4A8 /* SCShapeView.m */; settings = {ASSET_TAGS = (); }; };
+		3B586FD11BC98B9E00DFE4A8 /* QRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B586FD01BC98B9E00DFE4A8 /* QRScanViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA21888F1BC9DDBE008E4131 /* ReserveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA21888E1BC9DDBE008E4131 /* ReserveViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA2188921BC9E4FE008E4131 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2188911BC9E4FE008E4131 /* Reservation.m */; settings = {ASSET_TAGS = (); }; };
 		FA2188A61BC9E4FE008E4131 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2188A41BC9E4FE008E4131 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
@@ -53,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B586FCC1BC98A3700DFE4A8 /* SCShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCShapeView.h; sourceTree = "<group>"; };
+		3B586FCD1BC98A3700DFE4A8 /* SCShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCShapeView.m; sourceTree = "<group>"; };
+		3B586FCF1BC98B9E00DFE4A8 /* QRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScanViewController.h; sourceTree = "<group>"; };
+		3B586FD01BC98B9E00DFE4A8 /* QRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScanViewController.m; sourceTree = "<group>"; };
 		FA21888D1BC9DDBE008E4131 /* ReserveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReserveViewController.h; sourceTree = "<group>"; };
 		FA21888E1BC9DDBE008E4131 /* ReserveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReserveViewController.m; sourceTree = "<group>"; };
 		FA2188901BC9E4FE008E4131 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 				FA2188B31BC9E4FE008E4131 /* Constants.m */,
 				FABFE1C81BC8E69600B0BE97 /* ViewController.h */,
 				FABFE1C91BC8E69600B0BE97 /* ViewController.m */,
+				3B586FCC1BC98A3700DFE4A8 /* SCShapeView.h */,
+				3B586FCD1BC98A3700DFE4A8 /* SCShapeView.m */,
+				3B586FCF1BC98B9E00DFE4A8 /* QRScanViewController.h */,
+				3B586FD01BC98B9E00DFE4A8 /* QRScanViewController.m */,
 				FA21888D1BC9DDBE008E4131 /* ReserveViewController.h */,
 				FA21888E1BC9DDBE008E4131 /* ReserveViewController.m */,
 				FABFE1CB1BC8E69600B0BE97 /* Main.storyboard */,
@@ -292,7 +302,7 @@
 				TargetAttributes = {
 					FABFE1BE1BC8E69500B0BE97 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = C3V4QQ3VFL;
+						DevelopmentTeam = MREFAZBH67;
 					};
 					FABFE1D71BC8E69600B0BE97 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -360,11 +370,13 @@
 			files = (
 				FABFE1CA1BC8E69600B0BE97 /* ViewController.m in Sources */,
 				FA2188921BC9E4FE008E4131 /* Reservation.m in Sources */,
+				3B586FD11BC98B9E00DFE4A8 /* QRScanViewController.m in Sources */,
 				FA21888F1BC9DDBE008E4131 /* ReserveViewController.m in Sources */,
 				FABFE1C71BC8E69600B0BE97 /* AppDelegate.m in Sources */,
 				FABFE1C41BC8E69600B0BE97 /* main.m in Sources */,
 				FA2188B41BC9E4FE008E4131 /* Constants.m in Sources */,
 				FA2188B71BC9E4FE008E4131 /* CheckViewController.m in Sources */,
+				3B586FCE1BC98A3700DFE4A8 /* SCShapeView.m in Sources */,
 				FA2188BA1BC9E4FE008E4131 /* PaymentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +518,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LetsEat",
@@ -515,6 +529,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MonteThakkar.LetsEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -522,6 +537,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LetsEat",
@@ -531,6 +548,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MonteThakkar.LetsEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
