@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3728CD1BCAC0C200BB49D1 /* OptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3728CC1BCAC0C200BB49D1 /* OptionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3B586FCE1BC98A3700DFE4A8 /* SCShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B586FCD1BC98A3700DFE4A8 /* SCShapeView.m */; settings = {ASSET_TAGS = (); }; };
 		3B586FD11BC98B9E00DFE4A8 /* QRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B586FD01BC98B9E00DFE4A8 /* QRScanViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA21888F1BC9DDBE008E4131 /* ReserveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA21888E1BC9DDBE008E4131 /* ReserveViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B3728CB1BCAC0C200BB49D1 /* OptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionViewController.h; sourceTree = "<group>"; };
+		3B3728CC1BCAC0C200BB49D1 /* OptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionViewController.m; sourceTree = "<group>"; };
 		3B586FCC1BC98A3700DFE4A8 /* SCShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCShapeView.h; sourceTree = "<group>"; };
 		3B586FCD1BC98A3700DFE4A8 /* SCShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCShapeView.m; sourceTree = "<group>"; };
 		3B586FCF1BC98B9E00DFE4A8 /* QRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScanViewController.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				FA2188BB1BCA0830008E4131 /* Main.storyboard */,
 				3B586FCF1BC98B9E00DFE4A8 /* QRScanViewController.h */,
 				3B586FD01BC98B9E00DFE4A8 /* QRScanViewController.m */,
+				3B3728CB1BCAC0C200BB49D1 /* OptionViewController.h */,
+				3B3728CC1BCAC0C200BB49D1 /* OptionViewController.m */,
 				FA21888D1BC9DDBE008E4131 /* ReserveViewController.h */,
 				FA21888E1BC9DDBE008E4131 /* ReserveViewController.m */,
 				FA2188B51BC9E4FE008E4131 /* CheckViewController.h */,
@@ -302,7 +307,12 @@
 				TargetAttributes = {
 					FABFE1BE1BC8E69500B0BE97 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = C3V4QQ3VFL;
+						DevelopmentTeam = MREFAZBH67;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					FABFE1D71BC8E69600B0BE97 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -377,6 +387,7 @@
 				FA2188B41BC9E4FE008E4131 /* Constants.m in Sources */,
 				FA2188B71BC9E4FE008E4131 /* CheckViewController.m in Sources */,
 				3B586FCE1BC98A3700DFE4A8 /* SCShapeView.m in Sources */,
+				3B3728CD1BCAC0C200BB49D1 /* OptionViewController.m in Sources */,
 				FA2188BA1BC9E4FE008E4131 /* PaymentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +452,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: MonteThakkar.LetsEatz";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -485,6 +497,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: MonteThakkar.LetsEatz";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -520,7 +533,7 @@
 				INFOPLIST_FILE = LetsEat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = MonteThakkar.LetsEat;
+				PRODUCT_BUNDLE_IDENTIFIER = MonteThakkar.LetsEatz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -540,7 +553,7 @@
 				INFOPLIST_FILE = LetsEat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = MonteThakkar.LetsEat;
+				PRODUCT_BUNDLE_IDENTIFIER = MonteThakkar.LetsEatz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -10,6 +10,7 @@
 
 #import "Reservation.h"
 #import <Parse/Parse.h>
+#import "AppDelegate.h"
 
 @interface ReserveViewController ()
 
@@ -161,12 +162,14 @@
         newReservation[@"customerPhone"]= self.reservation.phone;
         newReservation[@"customerPartySize"]= self.reservation.partySize;
         newReservation[@"restuarantURL"]= @"www.foody.com";
-        newReservation[@"deviceToken"]=@"sjdhf2jjsj332";
+       AppDelegate *anAppDelete = [[UIApplication sharedApplication]delegate];
+       newReservation[@"deviceToken"] = [anAppDelete returnData];
         newReservation[@"totalAmount"]= @"5";
         
     [newReservation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"%@", newReservation);
+           NSLog(@"Save Successfully");
         } else {
             // There was a problem, check error.description
             NSLog(@"%@", error.description);

@@ -12,6 +12,9 @@
 #import <Stripe/Stripe.h>
 
 @implementation AppDelegate
+{
+   NSData *deviceTokenData;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -23,6 +26,14 @@
     // Initialize Parse.
     [Parse setApplicationId:@"c2TKa2Ywg5BlwI3e6fB2f7WMzFs5oxxhlNrzTs4y"
                   clientKey:@"SXhVtoEv2IwYNNaqOTArlOZkgvsdZx3KpMc8xksm"];
+   
+   UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                   UIUserNotificationTypeBadge |
+                                                   UIUserNotificationTypeSound);
+   UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                            categories:nil];
+   [application registerUserNotificationSettings:settings];
+   [application registerForRemoteNotifications];
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
@@ -34,6 +45,29 @@
     return YES;
 }
 
+-(NSData *)returnData {
+   return deviceTokenData;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+   // Store the deviceToken in the current installation and save it to Parse.
+   PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+   [currentInstallation setDeviceTokenFromData:deviceToken];
+   deviceTokenData = deviceToken;
+   
+   /*
+   PFQuery *pushQuery = [PFInstallation query];
+   [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
+   
+   // Send push notification to query
+   [PFPush sendPushMessageToQueryInBackground:pushQuery
+                                  withMessage:@"Hello World!"];*/
+   currentInstallation.channels = @[ @"global" ];
+   [currentInstallation saveInBackground];
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+   [PFPush handlePush:userInfo];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
