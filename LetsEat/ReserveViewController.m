@@ -157,9 +157,12 @@
     
     //send data to parse and store it
     PFObject *newReservation = [PFObject objectWithClassName:@"ReservationList"];
-    newReservation[@"customerName"]= self.reservation.name;
-    newReservation[@"customerPhone"]= self.reservation.phone;
-    newReservation[@"customerPartySize"]= self.reservation.partySize;
+        newReservation[@"customerName"]= self.reservation.name;
+        newReservation[@"customerPhone"]= self.reservation.phone;
+        newReservation[@"customerPartySize"]= self.reservation.partySize;
+        newReservation[@"restuarantURL"]= [NSNull null];
+        newReservation[@"deviceToken"]=[NSNull null];
+        newReservation[@"totalAmount"]= [NSNull null];
         
     [newReservation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {

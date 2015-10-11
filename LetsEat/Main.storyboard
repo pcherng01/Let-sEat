@@ -71,6 +71,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="reserveButton:" destination="ZFZ-HY-srW" eventType="touchUpInside" id="vQO-a4-D6T"/>
                                     <segue destination="fGE-GG-lzo" kind="show" id="htY-1K-27q"/>
                                 </connections>
                             </button>
@@ -200,51 +201,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wdv-sX-3CH">
-                                <rect key="frame" x="40" y="128" width="240" height="75"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay the Check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz6-P7-FuC">
-                                        <rect key="frame" x="0.0" y="8" width="240" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-qi-6Rf">
-                                        <rect key="frame" x="90" y="37" width="61" height="28"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Pay now!">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="beginCustomPayment:" destination="aFA-6e-ykL" eventType="touchUpInside" id="MVa-eW-XlC"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="ghp-hn-PEe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="0.91000000000000003" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="6PL-kP-U0Y"/>
-                                    <constraint firstAttribute="centerY" secondItem="n6P-qi-6Rf" secondAttribute="centerY" constant="-13.5" id="Bme-Vh-aRD"/>
-                                    <constraint firstAttribute="width" secondItem="Gz6-P7-FuC" secondAttribute="width" id="EiK-Ex-Kbm"/>
-                                    <constraint firstItem="Gz6-P7-FuC" firstAttribute="top" secondItem="Wdv-sX-3CH" secondAttribute="top" constant="8" id="aIf-fO-GYz"/>
-                                    <constraint firstAttribute="centerX" secondItem="Gz6-P7-FuC" secondAttribute="centerX" constant="-0.5" id="drx-DC-gLl"/>
-                                    <constraint firstAttribute="trailing" secondItem="n6P-qi-6Rf" secondAttribute="trailing" constant="89" id="n6h-H9-yPu"/>
+                                    <constraint firstAttribute="height" constant="230" id="DjI-Rs-oon"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enjoy your meal! :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz6-P7-FuC">
+                                <rect key="frame" x="40" y="258" width="240" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="8RX-Zj-mCA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="button" translatesAutoresizingMaskIntoConstraints="NO" id="sBo-9e-Rui">
+                                <rect key="frame" x="85" y="304" width="151" height="57"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="McA-T8-faO"/>
+                                    <constraint firstAttribute="height" constant="57" id="VWy-mb-WL4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="fork" translatesAutoresizingMaskIntoConstraints="NO" id="xLf-g2-sKU">
+                                <rect key="frame" x="110" y="325" width="101" height="15"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="VjC-5a-W1b"/>
+                                    <constraint firstAttribute="height" constant="15" id="frd-i2-U0I"/>
+                                    <constraint firstAttribute="width" constant="101" id="oJX-H7-trb"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Click below to request your cheque!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zQ-nE-Nnp">
+                                <rect key="frame" x="20" y="458" width="280" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="button" translatesAutoresizingMaskIntoConstraints="NO" id="wAy-fI-Lc0">
+                                <rect key="frame" x="86" y="503" width="151" height="57"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="Ujm-Fd-Cq9"/>
+                                    <constraint firstAttribute="height" constant="57" id="avc-Ss-oi1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-qi-6Rf">
+                                <rect key="frame" x="124" y="514" width="72" height="35"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3Fw-lC-bKk"/>
+                                    <constraint firstAttribute="width" constant="72" id="fWV-dm-aW8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Proceed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginCustomPayment:" destination="aFA-6e-ykL" eventType="touchUpInside" id="MVa-eW-XlC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.3715277177387809" blue="0.39489260134791149" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Wdv-sX-3CH" firstAttribute="top" secondItem="okR-97-3If" secondAttribute="bottom" constant="108" id="NUI-qg-c3i"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wdv-sX-3CH" secondAttribute="trailing" constant="24" id="fbC-oj-HTv"/>
-                            <constraint firstItem="Wdv-sX-3CH" firstAttribute="leading" secondItem="gKF-0X-oar" secondAttribute="leadingMargin" constant="24" id="xuO-lf-JD4"/>
+                            <constraint firstAttribute="trailing" secondItem="ghp-hn-PEe" secondAttribute="trailing" id="9Rm-DC-p9s"/>
+                            <constraint firstItem="ghp-hn-PEe" firstAttribute="leading" secondItem="gKF-0X-oar" secondAttribute="leading" id="Fim-7N-BWo"/>
+                            <constraint firstItem="Gz6-P7-FuC" firstAttribute="centerX" secondItem="gKF-0X-oar" secondAttribute="centerX" id="GmU-io-8gM"/>
+                            <constraint firstItem="n6P-qi-6Rf" firstAttribute="centerX" secondItem="gKF-0X-oar" secondAttribute="centerX" id="Gpd-0s-XxV"/>
+                            <constraint firstItem="ghp-hn-PEe" firstAttribute="centerX" secondItem="gKF-0X-oar" secondAttribute="centerX" id="GsT-ct-egq"/>
+                            <constraint firstItem="wAy-fI-Lc0" firstAttribute="centerX" secondItem="gKF-0X-oar" secondAttribute="centerX" constant="1.5" id="RA1-mQ-Yim"/>
+                            <constraint firstItem="Gz6-P7-FuC" firstAttribute="top" secondItem="ghp-hn-PEe" secondAttribute="bottom" constant="28" id="eEt-RJ-t7f"/>
+                            <constraint firstItem="3zQ-nE-Nnp" firstAttribute="centerX" secondItem="gKF-0X-oar" secondAttribute="centerX" id="gSm-TE-VEb"/>
+                            <constraint firstItem="xLf-g2-sKU" firstAttribute="centerX" secondItem="gKF-0X-oar" secondAttribute="centerX" id="ibj-jv-BKc"/>
+                            <constraint firstItem="sBo-9e-Rui" firstAttribute="centerX" secondItem="gKF-0X-oar" secondAttribute="centerX" id="tc1-5Z-a6v"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -256,9 +290,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button" width="82" height="30"/>
         <image name="confirmReservation" width="320" height="568"/>
         <image name="continue" width="155" height="40"/>
         <image name="eatButton" width="155" height="40"/>
+        <image name="fork" width="99" height="11"/>
         <image name="header" width="320" height="169"/>
         <image name="logo" width="250" height="250"/>
     </resources>
