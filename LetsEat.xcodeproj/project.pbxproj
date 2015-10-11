@@ -17,10 +17,10 @@
 		FA2188B41BC9E4FE008E4131 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2188B31BC9E4FE008E4131 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		FA2188B71BC9E4FE008E4131 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2188B61BC9E4FE008E4131 /* CheckViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA2188BA1BC9E4FE008E4131 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2188B91BC9E4FE008E4131 /* PaymentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FA2188BC1BCA0830008E4131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2188BB1BCA0830008E4131 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		FABFE1C41BC8E69600B0BE97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFE1C31BC8E69600B0BE97 /* main.m */; };
 		FABFE1C71BC8E69600B0BE97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFE1C61BC8E69600B0BE97 /* AppDelegate.m */; };
 		FABFE1CA1BC8E69600B0BE97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFE1C91BC8E69600B0BE97 /* ViewController.m */; };
-		FABFE1CD1BC8E69600B0BE97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABFE1CB1BC8E69600B0BE97 /* Main.storyboard */; };
 		FABFE1CF1BC8E69600B0BE97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABFE1CE1BC8E69600B0BE97 /* Assets.xcassets */; };
 		FABFE1D21BC8E69600B0BE97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABFE1D01BC8E69600B0BE97 /* LaunchScreen.storyboard */; };
 		FABFE1DD1BC8E69600B0BE97 /* LetsEatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFE1DC1BC8E69600B0BE97 /* LetsEatTests.m */; };
@@ -72,13 +72,13 @@
 		FA2188B61BC9E4FE008E4131 /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
 		FA2188B81BC9E4FE008E4131 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
 		FA2188B91BC9E4FE008E4131 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		FA2188BB1BCA0830008E4131 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FABFE1BF1BC8E69600B0BE97 /* LetsEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABFE1C31BC8E69600B0BE97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FABFE1C51BC8E69600B0BE97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FABFE1C61BC8E69600B0BE97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FABFE1C81BC8E69600B0BE97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FABFE1C91BC8E69600B0BE97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FABFE1CC1BC8E69600B0BE97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FABFE1CE1BC8E69600B0BE97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABFE1D11BC8E69600B0BE97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABFE1D31BC8E69600B0BE97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,11 +170,11 @@
 				FABFE1C91BC8E69600B0BE97 /* ViewController.m */,
 				3B586FCC1BC98A3700DFE4A8 /* SCShapeView.h */,
 				3B586FCD1BC98A3700DFE4A8 /* SCShapeView.m */,
+				FA2188BB1BCA0830008E4131 /* Main.storyboard */,
 				3B586FCF1BC98B9E00DFE4A8 /* QRScanViewController.h */,
 				3B586FD01BC98B9E00DFE4A8 /* QRScanViewController.m */,
 				FA21888D1BC9DDBE008E4131 /* ReserveViewController.h */,
 				FA21888E1BC9DDBE008E4131 /* ReserveViewController.m */,
-				FABFE1CB1BC8E69600B0BE97 /* Main.storyboard */,
 				FA2188B51BC9E4FE008E4131 /* CheckViewController.h */,
 				FA2188B61BC9E4FE008E4131 /* CheckViewController.m */,
 				FA2188B81BC9E4FE008E4131 /* PaymentViewController.h */,
@@ -302,7 +302,7 @@
 				TargetAttributes = {
 					FABFE1BE1BC8E69500B0BE97 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = MREFAZBH67;
+						DevelopmentTeam = C3V4QQ3VFL;
 					};
 					FABFE1D71BC8E69600B0BE97 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -341,9 +341,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2188BC1BCA0830008E4131 /* Main.storyboard in Resources */,
 				FABFE1D21BC8E69600B0BE97 /* LaunchScreen.storyboard in Resources */,
 				FABFE1CF1BC8E69600B0BE97 /* Assets.xcassets in Resources */,
-				FABFE1CD1BC8E69600B0BE97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,14 +413,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FABFE1CB1BC8E69600B0BE97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FABFE1CC1BC8E69600B0BE97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FABFE1D01BC8E69600B0BE97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

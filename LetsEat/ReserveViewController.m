@@ -22,6 +22,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    UIImage *btnImage = [UIImage imageNamed:@"eatButton.png"];
+//    UIButton *btnLogo = [UIButton buttonWithType:UIButtonTypeCustom];
+//    btnLogo.frame = CGRectMake(150, 700, 250, 150);
+//    [btnLogo addTarget:self action:@selector(showQRVC:) forControlEvents:UIControlEventTouchUpInside];
+//    [btnLogo setImage:btnImage forState:UIControlStateNormal];
+//    [self.view addSubview:btnLogo];
+    [self.view endEditing:YES];
+    
+    [_Name setDelegate:self];
+    [_Phone setDelegate:self];
+    [_PartySize setDelegate:self];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *) textField {
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,7 +121,9 @@
                          handler:^(UIAlertAction * action)
                          {
                              //Do some thing here
+                             
                              [view dismissViewControllerAnimated:YES completion:nil];
+                             
                              
                          }];
     
@@ -115,6 +135,7 @@
     popPresenter.sourceRect = _reserveButton.bounds;
     [self presentViewController:view animated:YES completion:nil];
     
+        
     //display button pressed for debugging
     NSLog(@"Reserve Button Tapped!");
     
@@ -151,4 +172,5 @@
         
     }
 }
+
 @end

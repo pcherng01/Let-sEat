@@ -115,15 +115,26 @@
             
             UIStoryboard *mainStry = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             ReserveViewController *reserveVC = [mainStry instantiateViewControllerWithIdentifier:@"SignUp"];
-            [self presentViewController:reserveVC animated:YES completion:nil];
-            //_theURL = [transformed stringValue];
-            /*FormViewController *formViewController = [[FormViewController alloc]init];
-             formViewController.urlString = _theURL;*/
-            //LoadingViewController *loadVC = [[LoadingViewController alloc]init];
-            //loadVC.getURL = _theURL;
-            // Push it onto the top of the navigation controller's stack
-            //[self.navigationController pushViewController:loadVC animated:YES];*/
-            NSLog(@"DOne");
+             
+             UIAlertController * view=   [UIAlertController
+                                          alertControllerWithTitle:@"Done!"
+                                          message:@"QR Code scan successful!"
+                                          preferredStyle:UIAlertControllerStyleActionSheet];
+             
+             UIAlertAction* ok = [UIAlertAction
+                                  actionWithTitle:@"Great!"
+                                  style:UIAlertActionStyleDefault
+                                  handler:^(UIAlertAction * action)
+                                  {
+                                      [view dismissViewControllerAnimated:YES completion:nil];
+                                      [self presentViewController:reserveVC animated:YES completion:nil];
+                                      
+                                  }];
+             
+             [view addAction:ok];
+             [self presentViewController:view animated:YES completion:nil];
+             
+            NSLog(@"Done");
          }
          
       }

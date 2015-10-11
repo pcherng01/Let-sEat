@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReserveViewController : UIViewController
+@interface ReserveViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *Name;
 @property (weak, nonatomic) IBOutlet UITextField *Phone;
 @property (weak, nonatomic) IBOutlet UITextField *PartySize;

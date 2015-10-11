@@ -10,7 +10,5 @@
 
 @interface ViewController : UIViewController
 
-- (IBAction)button:(UIButton *)sender;
-
 @end
 

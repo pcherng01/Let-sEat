@@ -23,14 +23,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)changeState:(id)sender {
+    UIButton *aButton = (UIButton *)sender;
+    aButton.highlighted = NO;
+    aButton.selected = NO;
+}
 - (IBAction)showQRVC:(id)sender {
    QRScanViewController *scanVC = [[QRScanViewController alloc]init];
    [self presentViewController:scanVC animated:YES completion:nil];
-}
-
-- (IBAction)button:(UIButton *)sender
-{
-    NSLog(@"Let's Eat! Button Tapped");
 }
 
 @end
