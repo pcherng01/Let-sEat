@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "QRScanViewController.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)showQRVC:(id)sender {
+   QRScanViewController *scanVC = [[QRScanViewController alloc]init];
+   [self presentViewController:scanVC animated:YES completion:nil];
 }
 
 - (IBAction)button:(UIButton *)sender

@@ -8,6 +8,7 @@
 
 #import "QRScanViewController.h"
 #import "SCShapeView.h"
+#import "ReserveViewController.h"
 @import AVFoundation;
 
 @interface QRScanViewController () <AVCaptureMetadataOutputObjectsDelegate> {
@@ -112,7 +113,9 @@
             // Start the timer which will hide the overlay
             [self startOverlayHideTimer];
             
-            
+            UIStoryboard *mainStry = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ReserveViewController *reserveVC = [mainStry instantiateViewControllerWithIdentifier:@"SignUp"];
+            [self presentViewController:reserveVC animated:YES completion:nil];
             //_theURL = [transformed stringValue];
             /*FormViewController *formViewController = [[FormViewController alloc]init];
              formViewController.urlString = _theURL;*/
