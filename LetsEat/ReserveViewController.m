@@ -160,9 +160,9 @@
         newReservation[@"customerName"]= self.reservation.name;
         newReservation[@"customerPhone"]= self.reservation.phone;
         newReservation[@"customerPartySize"]= self.reservation.partySize;
-        newReservation[@"restuarantURL"]= [NSNull null];
-        newReservation[@"deviceToken"]=[NSNull null];
-        newReservation[@"totalAmount"]= [NSNull null];
+        newReservation[@"restuarantURL"]= @"www.foody.com";
+        newReservation[@"deviceToken"]=@"sjdhf2jjsj332";
+        newReservation[@"totalAmount"]= @"5";
         
     [newReservation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
