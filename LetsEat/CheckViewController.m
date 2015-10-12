@@ -48,7 +48,7 @@
 
 - (IBAction)beginCustomPayment:(id)sender {
     PaymentViewController *paymentViewController = [[PaymentViewController alloc] initWithNibName:nil bundle:nil];
-    paymentViewController.amount = [NSDecimalNumber decimalNumberWithString:@"10.00"];
+    paymentViewController.amount = [NSDecimalNumber decimalNumberWithString:@"28.00"];
     paymentViewController.backendCharger = self;
     paymentViewController.delegate = self;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:paymentViewController];
